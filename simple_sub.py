@@ -7,13 +7,13 @@
 # bab ---> bzb
 # bcb ---> bzb
 # bxb ---> bzb
-REGEXP_1 = ''
-REGEXP_1_REPL = ''
+REGEXP_1 = 'b[a-x]b'
+REGEXP_1_REPL = 'bzb'
 
 # abcXYZabc   ---> abcabc
 # XaYbZcWaM   ---> abca
 # abc XYZabc  ---> abc abc
-REGEXP_2 = ''
+REGEXP_2 = '[A-Z]'
 REGEXP_2_REPL = ''
 
 # abcABCabc  ---> abcABCabc
@@ -22,20 +22,20 @@ REGEXP_2_REPL = ''
 # XaYbZcZaY  ---> XaYbZcZaY
 # DXEYFZabc  ---> XYZabc
 # ADBECFXYZ  ---> ABCXYZ
-REGEXP_3 = ''
+REGEXP_3 = '[D-F]'
 REGEXP_3_REPL = ''
 
 # abc0abc   ---> abcabc
 # 1a2b3c4   ---> abc
 # a123!@#bc ---> abc
-REGEXP_4 = ''
+REGEXP_4 = '[0-9!@#]'
 REGEXP_4_REPL = ''
 
 # a,b,c d,e,f      ---> a_b_c_d_e_f
 # abc!@#a          ---> abc___a
 # abc!@#,./abc abc ---> abc______abc_abc
-REGEXP_5 = ''
-REGEXP_5_REPL = ''
+REGEXP_5 = '[/\., !@#]'
+REGEXP_5_REPL = '_'
 
 # a abc aa bb  ---> a aa bb
 # a def dd fd  ---> a dd fd
